@@ -1,0 +1,107 @@
+* 
+    margin: 0
+    padding: 0
+    box-sizing: border-box
+    font-family: 'Inter', sans-serif
+    font-weight: 500
+    font-size: 18px
+    line-height: 22px
+    color: $black
+
+html, body
+    width: 100%
+    height: 100%
+
+h1, h2, h3, h4, h5, h6
+    font-size: inherit
+    font-weight: 500
+    line-height: inherit
+    color: inherit
+
+a
+    display: inline-block
+    text-decoration: none
+    &:hover
+        text-decoration: none
+
+ul, ol
+    list-style: none
+
+li
+    list-style: none
+
+img
+    max-width: 100%
+    vertical-align: top
+
+button
+    cursor: pointer
+    border: none
+    &::-moz-focus-inner
+        padding: 0
+        border: 0
+
+p, b, span, time, ul, li
+    font-size: inherit
+    line-height: inherit
+    color: inherit
+    letter-spacing: inherit
+    font-weight: inherit
+
+input::-ms-clear
+    display: none
+
+input[type="date"]::-webkit-calendar-picker-indicator
+    cursor: pointer
+
+input[type="number"] 
+    -moz-appearance: textfield
+    -webkit-appearance: textfield
+    appearance: textfield
+ 
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button 
+    display: none
+
+.page-wrapper
+    display: flex
+    flex-direction: column
+    min-height: 100%
+
+.main
+    flex: 1 1 auto
+
+.container
+    margin: 0 auto
+    padding: 0 30px
+    max-width: 1200px
+
+.sr-only
+    position: absolute
+    margin: -1px
+    padding: 0
+    width: 1px
+    height: 1px
+    white-space: nowrap
+    overflow: hidden
+    border: 0
+    clip: rect(0 0 0 0)
+    clip-path: inset(50%)  
+
+.preload
+    display: none
+
+.section
+    padding: 80px 0
+    &__title 
+        font-weight: 900
+        font-size: 36px
+        line-height: 44px
+        text-transform: uppercase
+        &_red 
+            margin-right: 10px
+            color: #e35359    
+
+@import 'additional-media/_base-media'
+
+

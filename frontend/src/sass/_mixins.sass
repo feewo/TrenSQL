@@ -1,0 +1,51 @@
+@mixin hoverUnderline
+    transition: opacity 0.2s
+    @media (min-width: 992px)
+        &:hover
+            text-decoration: underline
+        &:active
+            opacity: 0.5
+
+@mixin hoverRedBtn
+    transition: background-color 0.2s
+    @media (min-width: 992px)
+        &:hover
+            background-color: $valencia
+        &:active
+            opacity: 0.5
+
+@mixin redBtn
+    padding: 15px 30px  
+    font-weight: 500
+    font-size: 16px
+    line-height: 19px
+    text-align: center
+    text-transform: uppercase
+    color: $white
+    background-color: $mandy
+    border-radius: 30px
+    border: none
+    @include hoverRedBtn
+
+@mixin hoverWhiteBtn
+    transition: background-color 0.2s, color 0.2s, border 0.2s
+    @media (min-width: 992px)
+        &:hover
+            color: $white
+            background-color: $valencia
+            border: 1px solid $valencia
+        &:active
+            opacity: 0.5
+
+@mixin whiteBtn
+    padding: 15px 30px  
+    font-weight: 500
+    font-size: 16px
+    line-height: 19px
+    text-align: center
+    text-transform: uppercase
+    color: $mandy
+    background-color: $white
+    border: 1px solid $mandy
+    border-radius: 30px
+    @include hoverWhiteBtn

@@ -1,0 +1,48 @@
+.form
+    margin-top: 40px
+    max-width: 400px
+    width: 100%
+    &_mt0
+        margin-top: 0
+    &_inactive
+        display: none
+    &__input
+        padding: 15px 20px
+        width: 100%
+        font-size: 16px
+        line-height: 19px
+        border: 1px solid $silverChalice
+        border-radius: 5px
+        &:not(:first-child)
+            margin-top: 20px
+        &::placeholder
+            color: $silverChalice
+    &__buttons
+        display: flex
+        justify-content: space-between
+    &__submit
+        margin-top: 40px
+        cursor: pointer
+        @include redBtn
+        &_mt0
+            margin-top: 0
+    &__link
+        margin-top: 40px
+        @include whiteBtn
+    &__message
+        display: none
+        margin-top: 40px
+        &_active
+            display: block
+        &_mt0
+            margin-top: 0
+        &-text
+            font-size: 20px 
+            line-height: 26px 
+        &-link
+            margin-top: 40px
+            @include redBtn 
+
+@import '../blocks-media/_form-media'
+        
+    

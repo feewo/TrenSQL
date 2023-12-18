@@ -1,0 +1,63 @@
+@import '../_style'
+
+@import '../blocks/_spinner'
+@import '../blocks/_error'
+
+.top
+    .tabheader
+        &__list
+            display: flex
+            margin-top: 40px
+        &__item
+            &:first-child
+                .tabheader__item-btn
+                    border-radius: 30px 0 0 0
+                    &_active
+                        border-radius: 30px 30px 0 0 
+            &:last-child
+                .tabheader__item-btn
+                    border-radius: 0 30px 0 0
+                    &_active
+                        border-radius: 30px 30px 0 0 
+            &-btn
+                position: relative
+                margin: 0 -20px
+                padding: 19px 63px
+                color: $mandy
+                background-color: #EAE0E0
+                z-index: 1
+                transition: background-color 0.2s
+                &_active
+                    background-color: $white
+                    box-shadow: 0px -7px 25px rgba(227, 83, 89, 0.3)
+                    border-radius: 30px 30px 0 0 
+                    z-index: 2
+    .tabcontent
+        &__item
+            transform: translateY(30px)
+            height: 0
+            opacity: 0
+            // отключение событий мыши для неактивных таб-контентов, чтобы можно были кликнуть на элементы в футере
+            pointer-events: none
+            &_active
+                transform: translateY(0)
+                height: auto
+                opacity: 1
+                transition: opacity 0.5s, transform 0.5s
+                pointer-events: unset
+    &__list
+        width: 100%
+    &__item
+        display: flex
+        justify-content: space-between
+        align-items: center
+        column-gap: 30px
+        padding: 20px 0
+        width: 100%
+        border-bottom: 1px solid $silverChalice
+        &-name, &-score
+            text-transform: uppercase
+        &-score
+            white-space: nowrap
+
+@import '../pages-media/_top-media'

@@ -1,0 +1,46 @@
+@media (max-width: 1199px)
+    .header
+        &__link
+            margin-left: 50px
+        &__login
+            margin-left: 50px
+    
+@media (max-width: 991px)
+    .header
+        &__user
+            &-name
+                display: block
+        &__tasks
+            &-wrapper
+                margin-left: 30px
+        &__login
+            margin-left: 30px
+
+@media (max-width: 767px) 
+    .header
+        &__tasks
+            &-wrapper
+                &_1920
+                    display: none
+        
+@media (max-width: 575px)
+    .header
+        &__wrapper
+            justify-content: space-between
+            column-gap: 20px
+            padding-top: 10px
+        &__link
+            margin-left: 0
+        &__login
+            order: 1
+            margin-left: 0
+        &__user
+            order: 2
+            display: inline-block
+            margin: 15px auto 0 auto
+            width: 100%
+            text-align: center
+            &-name
+                display: inline
+        &__wrapper
+            flex-wrap: wrap
